@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variance Calculation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Anova Table</h1>
+        <form id="varianceForm">
+            <label for="n">Enter the number of samples (N):</label>
+            <input type="number" id="n" name="n" min="1" required>
+            
+            <label for="df">Enter the first degree of freedom:</label>
+            <input type="number" id="df" name="df" min="0" required>
+            
+            <label for="df2">Enter the second degree of freedom:</label>
+            <input type="number" id="df2" name="df2" min="0" required>
+
+            <h2>Enter the values for M1:</h2>
+            <div id="m1Inputs"></div>
+
+            <h2>Enter the values for M2:</h2>
+            <div id="m2Inputs"></div>
+
+            <h2>Enter the values for M3:</h2>
+            <div id="m3Inputs"></div>
+
+            <button type="button" onclick="calculateVariance()">Calculate</button>
+        </form>
+
+        <div id="results" class="hidden">
+            <h2>Results:</h2>
+            <p id="sumM1"></p>
+            <p id="sumM2"></p>
+            <p id="sumM3"></p>
+            <p id="grandTotal"></p>
+            <p id="correctionFactor"></p>
+            <p id="sumOfSquares"></p>
+            <p id="totalSumOfSquares"></p>
+            <p id="varianceBetweenSamples"></p>
+            <p id="varianceWithinSamples"></p>
+            <p id="varianceBetweenSamplesMeanSquare"></p>
+            <p id="varianceWithinSamplesMeanSquare"></p>
+            <p id="fRatio"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
